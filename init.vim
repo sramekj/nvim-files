@@ -88,7 +88,7 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
-" let g:OmniSharp_server_use_net6 = 1
+let g:OmniSharp_server_use_net6 = 1
 
 let g:coc_sources_disable_map = { 'cs': ['cs', 'cs-1', 'cs-2', 'cs-3'] }
 
