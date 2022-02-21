@@ -43,6 +43,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'sheerun/vim-polyglot'
 Plug 'mbbill/undotree'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'fannheyward/telescope-coc.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'OmniSharp/omnisharp-vim'
@@ -232,4 +233,16 @@ nnoremap <leader>ef :NvimTreeFindFile<CR>
 lua <<EOF
 require('user.nvim-web-devicons')
 require('user.nvim-tree')
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    
+      override_generic_sorter = true,  
+      override_file_sorter = true,     
+      case_mode = "smart_case",                                        
+    }
+  }
+}
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('coc')
 EOF
