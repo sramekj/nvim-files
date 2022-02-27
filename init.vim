@@ -1,5 +1,5 @@
 
-let $HOME = 'c:/Users/sramek'
+let $HOME = 'c:/Users/jansr'
 
 syntax on
 
@@ -50,7 +50,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nbouscal/vim-stylish-haskell'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 
@@ -166,6 +166,10 @@ nnoremap S :%s//g<Left><Left>
 
 
 nnoremap <silent> <leader> :noh<CR>
+
+" === neoformat ======================================
+
+nnoremap <leader>kd :Neoformat<CR>
 
 " === telescope ======================================
 
