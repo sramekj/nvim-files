@@ -1,5 +1,5 @@
 
-let $HOME = 'c:/Users/jansr'
+let $HOME = 'c:/Users/sramek'
 
 syntax on
 
