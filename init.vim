@@ -1,5 +1,5 @@
 
-let $HOME = '~/.config/nvim'
+let $HOME = '/home/veron/.config/nvim'
 
 syntax on
 
@@ -29,7 +29,7 @@ set signcolumn=yes
 set pyxversion=3
 
 
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('/home/veron/.config/nvim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'jremmen/vim-ripgrep'
