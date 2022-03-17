@@ -1,5 +1,5 @@
 
-let $HOME = 'c:/Users/sramek'
+let $HOME = '~/.config/nvim'
 
 syntax on
 
