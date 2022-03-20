@@ -187,6 +187,7 @@ nmap <silent> <leader>gt <Plug>(coc-type-definition)
 nmap <silent> <leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
 nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>rf <Plug>(coc-refactor)
 xmap <leader>fs  <Plug>(coc-format-selected)
 nmap <leader>fs  <Plug>(coc-format-selected)
 nmap <silent> <leader>g[ <Plug>(coc-diagnostic-prev)
@@ -199,8 +200,10 @@ nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>aa  <Plug>(coc-codeaction-cursor)
+nmap <leader><CR>  <Plug>(coc-fix-current)
 nmap <leader>cl  <Plug>(coc-codelens-action)
+nmap <leader>cc :<C-u>CocList commands<CR>
 
 command! -nargs=0 Format :call CocActionAsync('format')
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
