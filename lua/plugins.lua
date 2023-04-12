@@ -54,6 +54,7 @@ return {
       require("nvterm").setup(opts)
     end,
   },
+  -- TODO: autocomplete does not work well yet :[
   { "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
