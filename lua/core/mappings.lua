@@ -42,12 +42,6 @@ M.bind_telescope_v = {
   ["<leader>p"] = { '"+p', "Paste from clipboard" },
 }
 
--- TODO: does not work well...
-
-M.bind_escape_term = {
-  ["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" }
-}
-
 -- commenting: gcc/gbc - NORMAL line/block comment
 --             gc/gb   - VISUAL line/block comment
 
