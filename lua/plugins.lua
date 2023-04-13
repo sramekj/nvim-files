@@ -93,18 +93,15 @@ return {
     config = function()
       local cmp = require("cmp")
       require("cmp").setup({
-      
 
       completion = {
         completeopt = "menu,menuone",
       },
 
       window = {
-        completion = {
-          side_padding = (cmp_style ~= "atom" and cmp_style ~= "atom_colored") and 1 or 0,
-          winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel",
+        completion = cmp.config.window.bordered({
           scrollbar = false,
-        },
+        }),
         documentation = {
           border = border "CmpDocBorder",
           winhighlight = "Normal:CmpDoc",
