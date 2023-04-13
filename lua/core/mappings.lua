@@ -17,6 +17,7 @@ M.bind_telescope = {
   ["<leader>fn"] = { "<cmd>enew<cr>", "New File" },
   ["<leader>b"] = { name = "+buffer" },
   ["<leader>bb"] = { "<cmd>Telescope buffers<cr>", "Open buffers" },
+  ["<leader>ba"] = { "<cmd>badd unnamed<cr>", "Add buffer" },
   ["<leader>bd"] = { "<cmd>bd<cr>", "Delete buffer" },
   ["<leader>c"] = { name = "+code" },
   ["<leader>ca"] = { vim.lsp.buf.code_action, "Perform code action" },
@@ -35,6 +36,29 @@ M.bind_telescope = {
   ["<leader>q"] = { "<cmd>q<cr>", "Quit" },
   ["<leader>/"] = { "<cmd>Telescope live_grep<cr>", "Global search" },
   ["<leader>?"] = { "<cmd>Telescope commands<cr>", "List commands" },
+  ["g"] = { name = "+goto" },
+  ["gg"] = { "gg", "Goto file start" },
+  ["ge"] = { "G", "Goto file end" },
+  ["gh"] = { "0", "Goto line start" },
+  ["gl"] = { "$", "Goto line end" },
+  ["gs"] = { "^", "Goto first non-blank in line" },
+  ["gd"] = { vim.lsp.buf.definition, "Goto definition" },
+  ["gD"] = { vim.lsp.buf.declaration, "Goto declaration" },
+  ["gy"] = { vim.lsp.buf.type_definition, "Goto type definition" },
+  ["gr"] = { vim.lsp.buf.references, "Goto references" },
+  ["gi"] = { vim.lsp.buf.implementation, "Goto implementation" },
+  ["gn"] = { "<cmd>bn<cr>", "Goto next buffer" },
+  ["gp"] = { "<cmd>bp<cr>", "Goto previous buffer" },
+  ["m"] = { name = "+match" },
+  ["mm"] = { "%", "Goto matching bracket" },
+  ["ma"] = { "viW", "Select around object" },
+  ["mi"] = { "viw", "Select inside object" },
+}
+
+M.bind_surround = {
+  ["ms"] = { name = "Surround add" },
+  ["mr"] = { name = "Surround replace }" },
+  ["md"] = { name = "Surround delete" },
 }
 
 M.bind_telescope_v = {
