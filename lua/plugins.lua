@@ -1,16 +1,3 @@
-local function border(hl_name)
-  return {
-    { "╭", hl_name },
-    { "─", hl_name },
-    { "╮", hl_name },
-    { "│", hl_name },
-    { "╯", hl_name },
-    { "─", hl_name },
-    { "╰", hl_name },
-    { "│", hl_name },
-  }
-end
-
 return {
   {
     "ellisonleao/gruvbox.nvim",
@@ -102,10 +89,7 @@ return {
         completion = cmp.config.window.bordered({
           scrollbar = false,
         }),
-        documentation = {
-          border = border "CmpDocBorder",
-          winhighlight = "Normal:CmpDoc",
-        },
+        documentation = cmp.config.window.bordered(),
       },
       snippet = {
         expand = function(args)
