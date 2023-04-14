@@ -11,9 +11,10 @@ M.bind_neotree = {
 
 M.bind_telescope = {
   ["<leader>f"] = { name = "+file" },
-  ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find File" },
-  ["<leader>fg"] = { "<cmd>Telescope git_files<cr>", "Find Git File" },
-  ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+  ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find file" },
+  ["<leader>fm"] = { vim.lsp.buf.format, "Format file" },
+  ["<leader>fg"] = { "<cmd>Telescope git_files<cr>", "Find git file" },
+  ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Open recent file" },
   ["<leader>fn"] = { "<cmd>enew<cr>", "New File" },
   ["<leader>b"] = { name = "+buffer" },
   ["<leader>bb"] = { "<cmd>Telescope buffers<cr>", "Open buffers" },
