@@ -139,10 +139,12 @@ return {
     config = function()
       require("neotest").setup({
         adapters = {
-          require("neotest-rust"),
-          require("neotest-scala")({
+          require("neotest-rust"){
+            args = { "--no-capture" },
+          },
+          require("neotest-scala"){
             runner = "bloop",
-          })
+          }
         }
       })
     end
