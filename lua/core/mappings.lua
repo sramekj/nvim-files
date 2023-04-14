@@ -66,6 +66,19 @@ M.bind_telescope_v = {
   ["<leader>p"] = { '"+p', "Paste from clipboard" },
 }
 
+M.bind_dap = {
+  ["<leader>d"] = { name = "+debug" },
+  ["<leader>dc"] = { '<cmd>lua require("dap").continue()<cr>', "Continue"  },
+  ["<leader>ds"] = { '<cmd>lua require("dap").continue()<cr>', "Start"  },
+  ["<leader>dr"] = { '<cmd>lua require("dap").repl.toggle()<cr>', "REPL toggle"  },
+  ["<leader>db"] = { '<cmd>lua require("dap").toggle_breakpoint()<cr>', "Breakpoint toggle"  },
+  ["<leader>di"] = { '<cmd>lua require("dap").step_into()<cr>', "Step into"  },
+  ["<leader>do"] = { '<cmd>lua require("dap").step_over()<cr>', "Step over"  },
+  ["<leader>du"] = { '<cmd>lua require("dap").step_out()<cr>', "Step out"  },
+  ["<leader>dl"] = { '<cmd>lua require("dap").run_last()<cr>', "Run last"  },
+  ["<leader>dk"] = { '<cmd>lua require("dap.ui.widgets").hover()<cr>', "Info"  },
+}
+
 -- commenting: gcc/gbc - NORMAL line/block comment
 --             gc/gb   - VISUAL line/block comment
 

@@ -82,6 +82,7 @@ wk.register(require("core.mappings").bind_neotree)
 wk.register(require("core.mappings").bind_telescope)
 wk.register(require("core.mappings").bind_telescope_v, { mode = "v" })
 wk.register(require("core.mappings").bind_surround)
+wk.register(require("core.mappings").bind_dap)
 
 -- RUST SETUP --
 local rt = require("rust-tools")
