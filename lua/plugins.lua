@@ -128,6 +128,26 @@ return {
     end
   },
   {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "stevanmilic/neotest-scala",
+      "rouge8/neotest-rust",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rust"),
+          require("neotest-scala")({
+            runner = "bloop",
+          })
+        }
+      })
+    end
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
