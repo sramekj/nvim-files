@@ -10,6 +10,12 @@ return {
   { "folke/which-key.nvim", lazy = true},
   { "nvim-tree/nvim-web-devicons" },
   { "nvim-lua/plenary.nvim" },
+  { "mfussenegger/nvim-dap" },
+  { "simrat39/rust-tools.nvim",
+    config = function()
+      require("rust-tools").setup()
+    end,
+  },
   { "nvim-lualine/lualine.nvim",
     config = function()
       require("lualine").setup({

@@ -2,18 +2,7 @@ local M = {}
 
 M.register_lsp_servers = function() 
 
--- RUST --
-require'lspconfig'.rust_analyzer.setup{
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = true;
-      }
-    }
-  }
-}
-
--- JAVA --
+  -- JAVA --
 require'lspconfig'.java_language_server.setup{}
 
 -- SCALA --
