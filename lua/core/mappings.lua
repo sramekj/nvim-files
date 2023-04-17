@@ -1,10 +1,11 @@
+---@diagnostic disable: undefined-global
 local M = {}
 
 M.bind_neotree = {
   ["<leader>"] = {
     e = {
-      name = "+tree", 
-      e = { "<cmd>Neotree toggle<cr>", "toggle nvimtree" }, 
+      name = "+tree",
+      e = { "<cmd>Neotree toggle<cr>", "toggle nvimtree" },
     },
   },
 }
@@ -81,7 +82,8 @@ M.bind_dap = {
   ["<leader>do"] = { '<cmd>lua require("dap").step_over()<cr>', "Step over"  },
   ["<leader>du"] = { '<cmd>lua require("dap").step_out()<cr>', "Step out"  },
   ["<leader>dl"] = { '<cmd>lua require("dap").run_last()<cr>', "Run last"  },
-  ["<leader>dk"] = { '<cmd>lua require("dap.ui.widgets").hover()<cr>', "Info"  },
+  ["<leader>dk"] = { '<cmd>lua require("dap.ui.widgets").hover()<cr>', "Hover"  },
+  ["<leader>dv"] = { '<cmd>lua require("osv").launch({ port = 8086 })<cr>', "Lunch OSV" }
 }
 
 -- commenting: gcc/gbc - NORMAL line/block comment

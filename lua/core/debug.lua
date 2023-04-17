@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local M = {}
 
 M.setup_dap = function()
@@ -9,6 +10,10 @@ M.setup_dap = function()
     command = "/usr/bin/lldb-vscode-13",
     name = "lldb",
   }
+
+  dap.adapters.nlua = function(callback, config)
+    callback({ type = 'server', host = config.host or "127.0.0.1", port = config.port or 8086 })
+  end
 
   dap.configurations.scala = {
     {
@@ -30,7 +35,7 @@ M.setup_dap = function()
     },
   }
 
-  dap.configurations.rust= {
+  dap.configurations.rust = {
     {
       name = "Launch",
       type = "lldb",
@@ -45,7 +50,13 @@ M.setup_dap = function()
     },
   }
 
-
+  dap.configurations.lua = {
+    {
+      type = 'nlua',
+      request = 'attach',
+      name = "Attach to running Neovim instance",
+    }
+  }
 end
 
 

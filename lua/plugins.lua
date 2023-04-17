@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
   {
     "ellisonleao/gruvbox.nvim",
@@ -24,7 +25,7 @@ return {
     end,
   },
   { "MunifTanjim/nui.nvim" },
-  { "neovim/nvim-lspconfig",  
+  { "neovim/nvim-lspconfig",
     config = function()
       require("core.servers").register_lsp_servers()
     end,
@@ -90,7 +91,7 @@ return {
         })
         end,
   },
-  { 
+  {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require("indent_blankline").setup()
@@ -114,8 +115,8 @@ return {
   },
   {
     "scalameta/nvim-metals",
-    dependencies = { 
-      "nvim-lua/plenary.nvim", 
+    dependencies = {
+      "nvim-lua/plenary.nvim",
       "mfussenegger/nvim-dap"
     }
   },
@@ -144,12 +145,13 @@ return {
           },
           require("neotest-scala"){
             runner = "bloop",
+            framework = "scalatest",
           }
         }
       })
     end
   },
-  {"rcarriga/nvim-dap-ui",
+  { "rcarriga/nvim-dap-ui",
     dependencies = {
       "mfussenegger/nvim-dap"
     },
@@ -158,10 +160,16 @@ return {
     end
   },
   {
+    "jbyuki/one-small-step-for-vimkind",
+    dependencies = {
+      "mfussenegger/nvim-dap"
+    }
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
-    config = function(_, opts)
+    config = function(_, _)
       require("nvim-treesitter.configs").setup({
       	ensure_installed = require("core.parsers").treesitter_parsers,
         sync_install = false,
